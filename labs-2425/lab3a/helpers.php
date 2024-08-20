@@ -14,13 +14,13 @@ function retrieve_questions() {
 }
 
 function get_current_question($answers = '') {
-    $number_of_answers = strlen($answers);
+    $number_of_answers = strlen($answers ?? '');
     $questions = retrieve_questions();
     return $questions['questions'][$number_of_answers];
 }
 
 function get_current_question_number($answers = '') {
-    return strlen($answers) + 1;
+    return strlen($answers ?? '') + 1;
 }
 
 function get_options_for_question_number($number = 0) {
@@ -35,7 +35,7 @@ function compute_score($answers = []) {
     $score = 0;
     for ($i = 0; $i < MAX_QUESTION_NUMBER; $i++) {
         if ($correct_answers[$i] == $answers[$i]) {
-            $score += 100;
+            $score += 1;
         }
     }
     return $score;
