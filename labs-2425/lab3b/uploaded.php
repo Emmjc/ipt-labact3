@@ -7,10 +7,6 @@ if (!is_dir($upload_directory)) {
     mkdir($upload_directory, 0777, true);
 }
 
-
-
-
-
 // Handle PDF File
 if (isset($_FILES['pdf_file'])) {
     $uploaded_pdf_file = $upload_directory . basename($_FILES['pdf_file']['name']);
