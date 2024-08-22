@@ -34,7 +34,7 @@ function compute_score($answers = []) {
 
     $score = 0;
     for ($i = 0; $i < MAX_QUESTION_NUMBER; $i++) {
-        if ($correct_answers[$i] == $answers[$i]) {
+        if (isset($answers[$i]) && $correct_answers[$i] == $answers[$i]) {
             $score += 1;
         }
     }
