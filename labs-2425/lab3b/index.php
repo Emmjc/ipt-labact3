@@ -21,7 +21,7 @@
   <div class="col">
     <h4>File Upload</h4>
 
-    <form>
+    <form action="uploaded.php" method="POST" enctype="multipart/form-data">
         <div class="p-card">
             <h3>Text File</h3>
             <p class="p-card__content">
