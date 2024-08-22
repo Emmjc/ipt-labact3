@@ -22,6 +22,7 @@
     <h4>File Upload</h4>
 
     <form action="uploaded.php" method="POST" enctype="multipart/form-data">
+
         <div class="p-card">
             <h3>PDF File</h3>
             <p class="p-card__content">
@@ -41,8 +42,15 @@
             <input type="file" name="image_file" accept="image/*" />
             </p>
         </div>
-        
 
+        <div class="p-card">
+            <h3>Video File</h3>
+            <p class="p-card__content">
+            <input type="file" name="video_file" accept=".mp4" />
+            </p>
+        </div>
+        
+        
         <div>
             <button>
                 Upload
